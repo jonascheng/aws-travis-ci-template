@@ -9,11 +9,13 @@ android:
 # If your project is built with Ant or any other build tool that does not
 # automatically handle dependences, you need to specify the exact command
 # to run using install: key.
-install: ant deps
+install:
+  - echo "Install dependences"
 
 before_script:
 # Retrieve the last build status
   - echo "Retrieve the last build status"
+  - echo TRAVIS_BRANCH
 
 script: 
 # Run the build script and test
