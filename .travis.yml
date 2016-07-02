@@ -10,9 +10,9 @@ install:
 
 before_script:
 - echo 'Retrieve the last build status'
-- export BUILD_NUM=`expr 1000+$TRAVIS_BUILD_NUMBER`
+- export BUILD_NUM=$((1000+$TRAVIS_BUILD_NUMBER))
 - export BUILD_ARTIFACTS_FOLDER="build"
-- export BUILD_ARTIFACTS_FILE=$BUILD_ARTIFACTS_FOLDER"/"$BUILD_NUM+".txt"
+- export BUILD_ARTIFACTS_FILE=$BUILD_ARTIFACTS_FOLDER"/"$BUILD_NUM".txt"
 - mkdir $BUILD_ARTIFACTS_FOLDER
 
 script:
@@ -27,7 +27,10 @@ deploy:
     secure: "MMyz5ObEUmv3IwEPif6KD3Dvh1dg62dwRW+zq4HNYyJdI65ZmArMOBrxEvitZjEwITJH1kaaIMmMXhqNLGvADHh48tzpwhEg4TWmOU5YrSludowrOMCYzQo/WoivD46gzbGcmrxIx4e4dCH8b2imCC3xrDJzdg1SkBJKWCbDUWnixiZH1Ep0lzeGyUcHl2h62c6NgZNpZr5LAQsBm4b8kwh/Nfk4qpmsHvTFPxUtBL5pW56PI5lXeVfkUtmSBrgd9MXj/k4CJzV0Yg+u7FWZP4kyr2I6UCT17m5DgPNugBXMneKGdXQjs/DMHKqU2vWWGB6GshSpwNrnWE3BYrvwfGfoSG2tyNuB80w4tQoXj6L6uJBXrkMKvDXrLFmlJZEqmLmlviQvM2jKA2z1cXk4hMcgSxu6IWIGEwuf7AzN3CXFJOnXrHqA8Y7QRDtqzHnKygBIfadc9ivhLeBT9bogDor4W48YT3V+mwj76Unx0M1cdU/Uk+SoCxSJyPp4pB1IPp09pItkWUeyd1hvW7HAR7ZqKPdAJhHf/bR0N6s22PUFY6f6iISs5MA0Jj0oxc97Ee2Yh8kZMNkcfAja2uQeKM1udDtQPDVGSSRWhTg3HR8kRpPqJJGc5FcXbM9A5B80fjHZucsUTz03iICJ3Z2XUU/l+JC42UrMr2RKAGaAFUQ="
   bucket: doctor-mobile-build-artifacts
   skip_cleanup: true
+  region: us-west-1
+  detect_encoding: true
   local-dir: $BUILD_ARTIFACTS_FOLDER
+  upload-dir: build
   acl: private
 
 notifications:
