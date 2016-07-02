@@ -21,10 +21,9 @@ script:
 
 deploy:
   provider: s3
-  access_key_id: test
-  secret_access_key:
-    secure: mySeJmcZoX0xxtz9vAc/Rl/0hsGM7m6DqMtw7vyTuei4jBZsuSDpVLvQQ1m1Nik/M9OKZ3ic9fwCUKvJ/EDqI90B4VgK+U2O5gBeOV2fO4ppiWkn1TddmfMkpFxuusTCoyPqsC5tqPhyOT2k9oUmIe8sIQQinM9AvO+ssrHByBW5qlKqtQ83TyLjPjM5nhnle1CJorIxVMXoj9J/+a4+cfv0ASYPKv4xoHJPUsfnEuq08w+CgRalhqLfDndbF/J+d+CPcn76e1q3OamTlp5GD1h7bXqYyQO7kQNflQSUzgR+mncil2BolyDDvkkUKtv8uAN+POINJnoEaTUaP1g7Cm2VSkwuuGD0aC+4J8YleprOvU/GLRtZUwV9B4UtS7kPYOmDSK54b7nK1BtODGI1s80wbdAdXlCobqgBKi2Adntg4gXl31ba+I0itfIFkwwPNDuAkjYGtIjR9I6TuimYnPcJz6UKxZJse3xnfHACs/eYq2CG0x3s6867mhcB9DafDocweHsLpx7dpl4LsLh8dYJVVgdrxZnGRpefVLD5Dfx3d/yrd4xNv374mBmEuHoiIhmB/Mb7Z9QsxFbFwu0hXyvuKH2gIJp+0Es6uIcH/yDiDW0SkmoWYnPBnsiKz6NROqlfucNEe7zD4in1QQLe+tSgFSk5nIW6wDJC5jX+3jY=
-  bucket: DoctorMobile
+  access_key_id: AKIAIY3WA4WKHQVEC7BQ
+  secret_access_key: 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
+  bucket: doctor-mobile-build-artifacts
   local-dir: $BUILD_ARTIFACTS_FOLDER
   acl: private
 
