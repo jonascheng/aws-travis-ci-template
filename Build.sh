@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo ${1}
-echo ${2}
+echo 'Start to build on branch ${1}, commit ${2}, build number ${3}'
+

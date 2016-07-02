@@ -20,7 +20,7 @@ before_script:
 script: 
 # Run the build script and test
   - echo 'Run the build script and test'
-  - ./Build.sh $TRAVIS_BRANCH $BUILD_NUM
+  - ./Build.sh $TRAVIS_BRANCH ${TRAVIS_COMMIT} $BUILD_NUM
  
 after_success:
 # Update build status and upload artifacts
