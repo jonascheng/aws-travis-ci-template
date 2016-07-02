@@ -18,7 +18,7 @@ before_script:
 - export BUILD_ARTIFACTS_FOLDER="build"
 - export BUILD_ARTIFACTS_FILE=$BUILD_ARTIFACTS_FOLDER"/"$BUILD_NUM".txt"
 - mkdir $BUILD_ARTIFACTS_FOLDER
-- copy signkey.pem $BUILD_ARTIFACTS_FOLDER
+- cp signkey.pem $BUILD_ARTIFACTS_FOLDER
 
 script:
 - echo 'Run the build script and test'
