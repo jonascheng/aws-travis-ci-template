@@ -10,7 +10,7 @@ android:
 # automatically handle dependences, you need to specify the exact command
 # to run using install: key.
 install:
-  - echo -e 'Install dependences'
+  - echo 'Install dependences'
 
 before_script:
 # Retrieve the last build status
@@ -20,7 +20,7 @@ before_script:
 script: 
 # Run the build script and test
   - echo 'Run the build script and test'
-  - Build.sh $TRAVIS_BRANCH $BUILD_NUM
+  - ./Build.sh $TRAVIS_BRANCH $BUILD_NUM
  
 after_success:
 # Update build status and upload artifacts
