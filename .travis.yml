@@ -15,8 +15,10 @@ install:
 before_script:
 # Retrieve the last build status
   - echo "Retrieve the last build status"
-  - echo TRAVIS_BRANCH
-
+  - export BUILD_NUM=1000
+  - echo $BUILD_NUM
+  - echo $TRAVIS_BRANCH
+  
 script: 
 # Run the build script and test
   - echo "Run the build script and test"
